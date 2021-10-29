@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.0'
+          #- '1.0' # CI will fail on 1.0 due to the registry changes between versions?
           - '1.6'
           - 'nightly'
         os:

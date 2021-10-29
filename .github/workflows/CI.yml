@@ -1,10 +1,18 @@
 name: CI
 on:
   push:
+    path:
+      - src/**
+      - test/**
+      - Project.toml
     branches:
       - main
     tags: '*'
   pull_request:
+    path:
+      - src/**
+      - test/**
+      - Project.toml
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
@@ -13,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          #- '1.0' # CI will fail on 1.0 due to the registry changes between versions?
+          - '1.0' # CI will fail on 1.0 due to the registry changes between versions?
           - '1.6'
           - 'nightly'
         os:

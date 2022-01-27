@@ -1,5 +1,5 @@
 ```@meta
-CurrentModule = NetworkDynamicalSystems
+CurrentModule = NetworkModels
 ```
 
 # NetworkDynamicalSystems
